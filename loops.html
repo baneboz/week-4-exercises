@@ -76,7 +76,7 @@
     // 5.Write a code to calculate the sum of digits in a number and show that sum on screen.
     // Example: "Sum of digits in number 232 is 7".
     var numC = 234;
-    var numCStr = numC.toString();
+    var numCStr = numC + "0";
     var numCSum = 0;
 
     for (var m = 0; m < numCStr.length; m++) {
@@ -119,5 +119,298 @@
         console.log("Index of letter 'C' in given array is " + el);
       }
     }
+    console.log("_____________");
+
+    // EXERICES 2
+    // 1. Write a for loop that will iterate from 0 to 15.
+    // For each iteration, it will check if the current number is odd or even, and display a message to the screen.
+
+    for (var n = 0; n <= 15; n++) {
+      if (n % 2 === 0) {
+        console.log("Even: " + n);
+      } else {
+        console.log("Odd: " + n);
+      }
+    }
+    console.log("_____________");
+
+    // 2. Write a program to sum the multiples of 3 and 5 under 1000.
+    var sumOf3And5 = 0;
+
+    for (var nn = 0; nn < 1000; nn++) {
+      if (nn % 3 === 0 || nn % 5 === 0) {
+        sumOf3And5 += nn;
+      }
+    }
+    console.log("Sum the multiples of 3 and 5 under 1000 is: " + sumOf3And5);
+    console.log("_____________");
+
+    // 3. Write a program that will iterate from 0 to 10 and display squares of numbers.
+    for (var o = 0; o <= 10; o++) {
+      console.log("Square of " + o + " is: " + o * o);
+    }
+    console.log("_____________");
+
+    // 4. Write a program to compute the sum and product of an array of integers.
+    var numArr = [1, 5, 8, 9, 10, 22, 32];
+    var sumArr = 0;
+    var productArr = 1;
+    for (var p = 0; p < numArr.length; p++) {
+      sumArr += numArr[p];
+      productArr *= numArr[p];
+    }
+    console.log("Sum of array " + numArr + " is: " + sumArr);
+    console.log("Product of array " + numArr + " is: " + productArr);
+    console.log("_____________");
+
+    // 5. Write a program which prints the elements of the following array as a single string.
+    var someArr = ["1", "A", "B", "c", "r", true, NaN, undefined];
+    var someStr = "";
+    for (arrIndex in someArr) {
+      someStr += someArr[arrIndex];
+    }
+    console.log(someStr);
+    console.log("_____________");
+
+    // 6. Write a program that prints the elements of the following array.
+    var someArr1 = [
+      [1, 2, 1, 24],
+      [8, 11, 9, 4],
+      [7, 0, 7, 27],
+    ];
+    for (var q = 0; q < someArr1.length; q++) {
+      for (var s = 0; s < someArr1[q].length; s++) {
+        console.log(someArr1[q][s]);
+      }
+    }
+    console.log("_____________");
+
+    // 7. Write a program that outputs the sum of squares of the first 20 numbers.
+    var squareSum = 0;
+    for (var a = 0; a <= 20; a++) {
+      squareSum += a * a;
+    }
+    console.log("The sum of squares of the first 20 numbers is: " + squareSum);
+    console.log("_____________");
+
+    // 8. Write a program that computes average marks of the following students. Then use this average to determine the corresponding grade.
+    // David 80
+    // Marko 77
+    // Dany 88
+    // John 95
+    // Thomas 68
+
+    // The grades are computed as follows :
+    // &lt; 60% F
+    // &lt; 70% D
+    // &lt; 80% C
+    // &lt; 90% B
+    // &lt; 100% A
+
+    // 9. Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions.
+    // For numbers divisible by 3, print 'Fizz' instead of the number, and for numbers divisible by 5 (and not 3), print 'Buzz' instead.
+    // When you have that working, modify your program to print 'FizzBuzz', for numbers that are divisible by both 3 and 5 (and still print
+    // 'Fizz' or 'Buzz' for numbers divisible by only one of those).
+    // Note: This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you’ve solved it, you’re now allowed to feel good about yourself.
+    for (var b = 1; b <= 100; b++) {
+      if (b % 5 === 0 && b % 3 === 0) {
+        console.log("FizzBuzz");
+      } else if (b % 3 === 0) {
+        console.log("Fizz");
+      } else if (b % 5 === 0 && b % 3 !== 0) {
+        console.log("Buzz");
+      } else {
+        console.log(b);
+      }
+    }
+
+    console.log("_____________");
+
+    // EXERCISES 3
+    // Write a program that checks if a given element e is in the array a.
+    // Input: e = 3, a = [5, -4.2, 3, 7]
+    // Output: yes
+    // Input: e = 3, a = [5, -4.2, 18, 7]
+    // Output: no
+    var inputEl = 3;
+    var someArr2 = [5, -4.2, 3, 7];
+    var counter = 0;
+
+    for (arIndex2 in someArr2) {
+      if (inputEl === someArr2[arIndex2]) counter++;
+    }
+
+    if (counter > 0) {
+      console.log("YES");
+    } else {
+      console.log("NO");
+    }
+    console.log("_____________");
+
+    // 2. Write a program that multiplies every positive element of a given array by 2.
+    // Input array: [-3, 11, 5, 3.4, -8]
+    // Output array: [-3, 22, 10, 6.8, -8]
+    var someArr3 = [-3, 11, 5, 3.4, -8];
+    var someArr4 = [];
+
+    for (arrIndex3 in someArr3) {
+      if (someArr3[arrIndex3] > 0) {
+        someArr4[someArr4.length] = someArr3[arrIndex3] * 2;
+      } else {
+        someArr4[someArr4.length] = someArr3[arrIndex3];
+      }
+    }
+
+    console.log(someArr4);
+    console.log("_____________");
+
+    // 3. Write a program that finds the minimum of a given array and prints out its value and index.
+    // Input array: [4, 2, 2, -1, 6]
+    // Output: -1, 3
+
+    var someArr5 = [4, 2, 2, -1, 6];
+    var minEl = someArr5[0];
+    var minIn = 0;
+
+    for (var c = 0; c < someArr5.length; c++) {
+      if (minEl > someArr5[c]) minEl = someArr5[c];
+      if (minEl === someArr5[c]) minIn = c;
+    }
+
+    console.log(
+      "Minimum of given array and his index: " + minEl + ", " + minIn
+    );
+    console.log("_____________");
+
+    // 4. Write a program that finds the first element larger than minimum and prints out its value.
+    // Input array: [4, 2, 2, -1, 6]
+    // Output: 2
+
+    var minEl1 = someArr5[0];
+    var firstLargerThanMin = someArr5[0];
+
+    for (var d = 0; d < someArr5.length; d++) {}
+
+    console.log("The first element larger than minimum: " + minEl1);
+    console.log("_____________");
+
+    // 5. Write a program that calculates the sum of positive elements in the array.
+    // Input array: [3, 11, -5, -3, 2]
+    // Output: 16
+    var someArr6 = [3, 11, -5, -3, 2];
+    var sum1 = 0;
+    for (arrIndex6 in someArr6) {
+      if (someArr6[arrIndex6] > 0) {
+        sum1 += someArr6[arrIndex6];
+      }
+    }
+    console.log("Sum of positive elements in the array is: " + sum1);
+    console.log("_____________");
+
+    // 6. Write a program that checks if a given array is symmetric.
+    // An array is symmetric if it can be read the same way both from the left and the right hand side.
+    // Input array: [2, 4, -2, 7, -2, 4, 2]
+    // Output: The array is symmetric.
+    // Input array: [3, 4, 12, 8]
+    // Output: The array isn’t symmetric.
+
+    var someArr7 = [2, 4, -2, 7, -2, 4, 2];
+    var f = someArr7.length - 1;
+    var symmetricOrNot = "";
+
+    for (var e = 0; e < someArr7.length; e++) {
+      if (someArr7[e] !== someArr7[f]) {
+        symmetricOrNot = "The array isn’t symmetric.";
+      } else {
+        symmetricOrNot = "The array is symmetric.";
+      }
+
+      f--;
+    }
+
+    console.log(symmetricOrNot);
+    console.log("_____________");
+
+    // 7. Write a program that intertwines two arrays. You can assume the arrays are of the same length.
+    // Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+    // Output array: [4, 3, 5, 8, 6, 11, 2, 9]
+
+    var someArr8 = [4, 5, 6, 2];
+    var someArr9 = [3, 8, 11, 9];
+    var someArr10 = [];
+    var xIndex = 0;
+    var zIndex = 1;
+
+    for (var g = 0; g < someArr8.length; g++) {
+      someArr10[xIndex] = someArr8[g];
+      someArr10[zIndex] = someArr9[g];
+      xIndex += 2;
+      zIndex += 2;
+    }
+
+    console.log(someArr10);
+    console.log("_____________");
+
+    // 8. Write a program that concatenates two arrays.
+    // Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+    // Output array: [4, 5, 6, 2, 3, 8, 11, 9]
+    var someArr11 = [];
+    var cIndex = someArr8.length;
+
+    for (var z = 0; z < someArr8.length; z++) {
+      someArr11[z] = someArr8[z];
+      someArr11[cIndex] = someArr9[z];
+      cIndex++;
+    }
+
+    console.log(someArr11);
+    console.log("_____________");
+
+    // 9. Write a program that deletes a given element e from the array a.
+    // Input: e = 2, a = [4, 6, 2, 8, 2, 2]
+    // Output array: [4, 6, 8]
+    var someArr12 = [4, 6, 2, 8, 2, 2];
+    var input2 = 2;
+    var someArr13 = [];
+    var someArr13Index = 0;
+
+    for (var x = 0; x < someArr12.length; x++) {
+      if (someArr12[x] !== input2) {
+        someArr13[someArr13Index] = someArr12[x];
+        someArr13Index++;
+      }
+    }
+    console.log(someArr13);
+    console.log("_____________");
+
+    // 10. Write a program that inserts a given element e on the given position p in the array a.
+    // If the value of the position is greater than the array length, print the error message.
+    // Input: e = 78, p = 3, a = [2, -2, 33, 12, 5, 8]
+    // Output: [2, -2, 33, 78, 12, 5, 8]
+
+    var someArr14 = [2, -2, 33, 12, 5, 8];
+    var input3 = 78;
+    var position = 3;
+    var someArr15 = [];
+
+    if (position > someArr14.length) {
+      someArr15 = "Error";
+    } else {
+      for (var ii = 0; ii < someArr14.length; ii++) {
+        if (ii !== position) {
+          someArr15[ii] = someArr14[ii];
+        } else {
+          someArr15[ii] = input3;
+          break;
+        }
+      }
+
+      for (var jj = position + 1; jj <= someArr14.length; jj++) {
+        console.log(jj);
+        someArr15[jj] = someArr14[jj - 1];
+      }
+    } // end else
+
+    console.log(someArr15);
   </script>
 </html>
